@@ -74,6 +74,11 @@ The previous command should start the simulator with the business area environme
 More launch files are in the `experimental_package/launch` repository.  
 Ready to test scenarios are in the `experimental_package/scenarios` repository.  
 
+### Only Pedestrian data
+```
+roslaunch experimental_package human_data_only.launch
+```
+
 ### With Gazebo
 ```
 roslaunch pedsim_gazebo_plugin scene1.launch
