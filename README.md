@@ -17,11 +17,7 @@ It allows:
 
 ##  Contents
 * **[Features](#features)**
-<<<<<<< HEAD
-* **[Installation](#installation-and-launch)**
-=======
 * **[Installation and launch](#installation-and-launch)**
->>>>>>> 1ac7a4aeec3eb859c5165841bcd833affbcfd785
 * **[AV control modes](#av-control-modes)**
 * **[Launch files](#launch-files)**
 * **[Scenarios](#scenarios)**
