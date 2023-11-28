@@ -49,5 +49,5 @@
    </include>
 
    <!-- Rviz -->
-   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find pedsim_simulator)/rviz/with_robot$(arg ns).rviz" if="$(arg visualize)"/>
+   <node pkg="rviz" type="rviz" name="rviz" args="-d $(find pedsim_simulator)/rviz/human_only$(arg ns).rviz" if="$(arg visualize)"/>
 </launch>
