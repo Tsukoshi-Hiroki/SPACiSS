@@ -8,7 +8,11 @@
   <arg name="robot_description" default="$(find sq2_ccv_description)/robot/sq2_ccv.urdf"/>
   <arg name="ns" default=""/>
   
-  <param name="robot_description" textfile="$(arg robot_description)"/>
+  <!-- <param name="robot_description" textfile="$(arg robot_description)"/> -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find sq2_ccv_description)/robot/sq2_ccv.urdf"/>
+
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
   <!-- robot driving controller -->
   <node name="driving_controller" type="simulate_diff_drive_robot" pkg="pedsim_simulator" output="screen">

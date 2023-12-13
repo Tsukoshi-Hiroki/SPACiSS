@@ -27,8 +27,8 @@
   <arg name="force_group_repulsion" default="0.0"/>
   <arg name="force_wall" default="2.0"/>
 
-   <arg name="read_from_file" default="false"/>
-   <arg name="trajectories_file" default=""/>
+  <arg name="read_from_file" default="false"/>
+  <arg name="trajectories_file" default=""/>
 
   <arg name="group_size_lambda" default="1.1"/>
   <arg name="groups_couples_proportion" default="0.0"/>
@@ -45,10 +45,11 @@
   <arg name="hesitation_threshold" default="0.1"/>
   <arg name="ns" default=""/>
 
-  <param name="robot_description" textfile="$(arg robot_description)" if="$(arg with_robot)"/>
+  <!-- <param name="robot_description" textfile="$(arg robot_description)" if="$(arg with_robot)"/> -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find sq2_ccv_description)/robot/sq2_ccv.urdf" if="$(arg with_robot)"/>
 
-   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" if="$(arg with_robot)" />
-   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" if="$(arg with_robot)"/>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" if="$(arg with_robot)" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" if="$(arg with_robot)"/>
 
   <!-- main simulator node -->
   <node name="pedsim_simulator" pkg="pedsim_simulator" type="pedsim_simulator" output="screen">
