@@ -8,7 +8,9 @@
   <arg name="simulation_factor" default="1.0"/> <!-- Speed up -->
   <arg name="update_rate" default="25.0"/> <!-- Hz -->
   <arg name="ns" default=""/>
-  <arg name="robot_description" default="$(find experimental_package)/models/zoe/urdf/$(arg ns)/zoe.urdf"/>
+  <!-- <arg name="robot_description" default="$(find experimental_package)/models/zoe/urdf/$(arg ns)/zoe.urdf"/> -->
+  <arg name="robot_description" default="$(find sq2_ccv_description)/robot/sq2_ccv.urdf"/>
+  <param name="robot_description" command="$(find xacro)/xacro $(find sq2_ccv_description)/robot/sq2_ccv.urdf"/>
 
   <arg name="pose_initial_x" default="0.0"/>
   <arg name="pose_initial_y" default="-20.0"/>
