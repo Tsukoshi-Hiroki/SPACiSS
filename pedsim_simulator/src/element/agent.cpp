@@ -139,19 +139,19 @@ void Agent::computeForces()
   {
      if (neighbor->id == id)
         continue;
-     if (neighbor->getType() == ROBOT){
-         processCarInformation(neighbor);
+   //   if (neighbor->getType() == ROBOT){
+   //       processCarInformation(neighbor);
 
-         // is agent colliding with AV ?
-         Ped::Tvector diff = neighbor->p - p;
-         double physicalDistance = diff.length() -
-               (this->getRadius(v.angleTo(diff),0.0) + neighbor->getRadius(neighbor->getWalkingDirection().angleTo(-diff),0.0));
-           if(physicalDistance <= 0.0){
-              collideAV = true;
-              v = physicalForce() + obstacleforce;
-              ROS_INFO_STREAM(id << " COLLIDE");
-           }
-      }
+   //       // is agent colliding with AV ?
+   //       Ped::Tvector diff = neighbor->p - p;
+   //       double physicalDistance = diff.length() -
+   //             (this->getRadius(v.angleTo(diff),0.0) + neighbor->getRadius(neighbor->getWalkingDirection().angleTo(-diff),0.0));
+   //         if(physicalDistance <= 0.0){
+   //            collideAV = true;
+   //            v = physicalForce() + obstacleforce;
+   //            ROS_INFO_STREAM(id << " COLLIDE");
+   //         }
+   //    }
    }
 
   if (!perceiveAV) {
@@ -215,9 +215,9 @@ Ped::Tvector Agent::socialForce() const
        Ped::Tvector diff = other->p - p;
 
        //Semble être la meilleure combinaison
-       if(other->getType() == ROBOT){
-          gamma = 0.2;
-       }
+      //  if(other->getType() == ROBOT){
+      //     gamma = 0.2;
+      //  }
 
        //      if(other->getType() == ROBOT) diff /= 5;
 
@@ -261,12 +261,12 @@ Ped::Tvector Agent::socialForce() const
        Ped::Tvector forceVelocity = forceVelocityAmount * interactionDirection;
        Ped::Tvector forceAngle = forceAngleAmount * interactionDirection.leftNormalVector();
 
-       if(other->getType() == ROBOT){
-          forceVelocity.scale(2);
-          forceAngle.scale(2);
-       }
+      //  if(other->getType() == ROBOT){
+      //     forceVelocity.scale(2);
+      //     forceAngle.scale(2);
+      //  }
 
-       else{
+      //  else{
           // If in the same group: social force reduced
           if (this->isInGroupWith(other)) {
              forceVelocity.scale(0.05);
@@ -282,7 +282,7 @@ Ped::Tvector Agent::socialForce() const
                forceAngle.scale(2);
             }
           }
-       }
+      //  }
 
        force += forceVelocity + forceAngle;
      }
@@ -333,10 +333,10 @@ Ped::Tvector Agent::physicalForce() const
          double kbd = k_body;
          double ksl = k_slidding;
 
-         if(other->getType() == ROBOT){
-            kbd = k_body*500;
-            ksl = k_slidding*1000;
-         }
+         // if(other->getType() == ROBOT){
+         //    kbd = k_body*500;
+         //    ksl = k_slidding*1000;
+         // }
          // body force
          force += kbd * -physicalDistance * -diffDirection;
 
@@ -1179,10 +1179,10 @@ QList<const Agent*> Agent::updatePerceivedNeighbors()
     if (perceiveAgent(upNeighbor, visionDistance, angle)){
         perceived.append(upNeighbor);
         neighborsSet.insert(upNeighbor);
-        if (upNeighbor->getType() == ROBOT){
-           // ROS_INFO_STREAM("PEDESTRIAN ID " << getId() << "PERCEIVES A CAR ID" << neighbor->getId());
-            this->perceiveAV = true;
-        }
+      //   if (upNeighbor->getType() == ROBOT){
+      //      // ROS_INFO_STREAM("PEDESTRIAN ID " << getId() << "PERCEIVES A CAR ID" << neighbor->getId());
+      //       this->perceiveAV = true;
+      //   }
     }
   }
   this->neighbors = neighborsSet;
