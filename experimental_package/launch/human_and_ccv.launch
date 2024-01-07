@@ -12,10 +12,16 @@
   <arg name="robot_description" default="$(find sq2_ccv_description)/robot/sq2_ccv.urdf"/>
   <param name="robot_description" command="$(find xacro)/xacro $(find sq2_ccv_description)/robot/sq2_ccv.urdf"/>
 
+  <!-- ロボットの初期値に関する値はscene_fileと揃えること！ -->
   <arg name="pose_initial_x" default="0.0"/>
   <arg name="pose_initial_y" default="-20.0"/>
   <arg name="pose_initial_theta" default="1.57"/>
   <arg name="max_robot_speed" default="2.5"/>
+
+  <!-- <arg name="pose_initial_x" default="0.0"/>
+  <arg name="pose_initial_y" default="0.0"/>
+  <arg name="pose_initial_theta" default="0.0"/>
+  <arg name="max_robot_speed" default="2.5"/> -->
 
   <!-- Simulator -->
   <include file="$(find pedsim_simulator)/launch/simulator_with_ccv.launch">
