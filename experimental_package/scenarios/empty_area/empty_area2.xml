@@ -12,14 +12,16 @@
    <waypoint id="goal7" x="-25.0" y="0.0" r="2"/>
    <waypoint id="goal8" x="25.0" y="0.0" r="2" /> -->
 
-   <waypoint id="goal1" x="15.0" y="15.0" r="2" />
-   <waypoint id="goal2" x="15.0" y="-14.0" r="2"/>
-   <waypoint id="goal3" x="0.0" y="-14.0" r="2" />
-   <waypoint id="goal4" x="20.0" y="-14.0" r="2" />
-   <waypoint id="goal5" x="0.0" y="14.0" r="2" />
-   <waypoint id="goal6" x="20.0" y="14.0" r="2"/>
-   <waypoint id="goal7" x="0.0" y="0.0" r="2"/>
-   <waypoint id="goal8" x="20.0" y="0.0" r="2" />
+   <waypoint id="goal1" x="15.0" y="3.0" r="2" />
+   <waypoint id="goal2" x="5.0" y="-3.0" r="2"/>
+   <waypoint id="goal3" x="0.0" y="-3.0" r="2" />
+   <waypoint id="goal4" x="10.0" y="3.0" r="2" />
+   <waypoint id="goal5" x="0.0" y="3.0" r="2" />
+   <waypoint id="goal6" x="20.0" y="-3.0" r="2"/>
+   <waypoint id="goal7" x="5.0" y="-3.0" r="2"/>
+   <waypoint id="goal8" x="20.0" y="3.0" r="2" />
+   <waypoint id="goal9" x="5.0" y="3.0" r="2"/>
+   <waypoint id="goal10" x="15.0" y="-3.0" r="2"/>
 
    <!-- <obstacle id="obs1" x1="-26" y1="26" x2="-26" y2="23" />
    <obstacle id="obs2" x1="-26" y1="-5" x2="-26" y2="15" />
@@ -31,37 +33,37 @@
    <obstacle id="obs7" x1="10" y1="-26" x2="20" y2="-26" />
    <obstacle id="obs8" x1="-10" y1="-26" x2="0" y2="-26" /> -->
 
-   <agent x="10" y="0" n="9" dx="30" dy="20" type="0" purpose="1">
+   <agent x="10" y="0" n="15" dx="18" dy="5" type="0" purpose="1">
          <addwaypoint id="goal1" />
-         <addwaypoint id="goal6" />
-   </agent>
-   <agent x="10" y="0" n="9" dx="30" dy="20" type="0" purpose="1">
          <addwaypoint id="goal2" />
-         <addwaypoint id="goal8" />
    </agent>
-   <agent x="10" y="0" n="9" dx="30" dy="20" type="0" purpose="1">
+   <agent x="10" y="0" n="15" dx="18" dy="5" type="0" purpose="1">
          <addwaypoint id="goal3" />
-         <addwaypoint id="goal5" />
-   </agent>
-   <agent x="10" y="0" n="9" dx="30" dy="20" type="0" purpose="1">
          <addwaypoint id="goal4" />
-         <addwaypoint id="goal2" />
    </agent>
-   <agent x="10" y="0" n="9" dx="30" dy="20" type="0" purpose="1">
+   <agent x="10" y="0" n="15" dx="18" dy="5" type="0" purpose="1">
          <addwaypoint id="goal5" />
-         <addwaypoint id="goal8" />
-   </agent>
-   <agent x="10" y="0" n="10" dx="30" dy="20" type="0" purpose="1">
          <addwaypoint id="goal6" />
-         <addwaypoint id="goal5" />
    </agent>
-   <agent x="10" y="0" n="10" dx="30" dy="20" type="0" purpose="1">
+   <agent x="10" y="0" n="15" dx="18" dy="5" type="0" purpose="1">
          <addwaypoint id="goal7" />
-         <addwaypoint id="goal1" />
-   </agent>
-   <agent x="10" y="0" n="10" dx="30" dy="20" type="0" purpose="1">
          <addwaypoint id="goal8" />
-         <addwaypoint id="goal4" />
+   </agent>
+   <agent x="10" y="0" n="15" dx="18" dy="5" type="0" purpose="1">
+         <addwaypoint id="goal9" />
+         <addwaypoint id="goal10" />
+   </agent>
+   <agent x="10" y="0" n="15" dx="18" dy="5" type="0" purpose="1">
+         <addwaypoint id="goal2" />
+         <addwaypoint id="goal8" />
+   </agent>
+   <agent x="10" y="0" n="15" dx="18" dy="5" type="0" purpose="1">
+         <addwaypoint id="goal1" />
+         <addwaypoint id="goal3" />
+   </agent>
+   <agent x="10" y="0" n="15" dx="18" dy="5" type="0" purpose="1">
+         <addwaypoint id="goal6" />
+         <addwaypoint id="goal9" />
    </agent>
 
   <!-- 以下は歩行者に関する情報 -->
