@@ -1,0 +1,55 @@
+<!-- 0.05p/m²-->
+<!-- 歩行者25人 -->
+<scenario>
+   <waypoint id="dest" x="15" y="0.0" r="5" />
+   <waypoint id="farDest" x="30" y="0.0" r="5" />
+
+   <waypoint id="goal1" x="15.0" y="3.0" r="2" />
+   <waypoint id="goal2" x="5.0" y="-3.0" r="2"/>
+   <waypoint id="goal3" x="0.0" y="-3.0" r="2" />
+   <waypoint id="goal4" x="10.0" y="3.0" r="2" />
+   <waypoint id="goal5" x="0.0" y="3.0" r="2" />
+   <waypoint id="goal6" x="20.0" y="-3.0" r="2"/>
+   <waypoint id="goal7" x="5.0" y="-3.0" r="2"/>
+   <waypoint id="goal8" x="20.0" y="3.0" r="2" />
+   <waypoint id="goal9" x="5.0" y="3.0" r="2"/>
+   <waypoint id="goal10" x="15.0" y="-3.0" r="2"/>
+
+   <agent x="10" y="0" n="3" dx="18" dy="5" type="0" purpose="1">
+         <addwaypoint id="goal1" />
+         <addwaypoint id="goal2" />
+   </agent>
+   <agent x="10" y="0" n="3" dx="18" dy="5" type="0" purpose="1">
+         <addwaypoint id="goal3" />
+         <addwaypoint id="goal4" />
+   </agent>
+   <agent x="10" y="0" n="3" dx="18" dy="5" type="0" purpose="1">
+         <addwaypoint id="goal5" />
+         <addwaypoint id="goal6" />
+   </agent>
+   <agent x="10" y="0" n="3" dx="18" dy="5" type="0" purpose="1">
+         <addwaypoint id="goal7" />
+         <addwaypoint id="goal8" />
+   </agent>
+   <agent x="10" y="0" n="3" dx="18" dy="5" type="0" purpose="1">
+         <addwaypoint id="goal9" />
+         <addwaypoint id="goal10" />
+   </agent>
+   <agent x="10" y="0" n="3" dx="18" dy="5" type="0" purpose="1">
+         <addwaypoint id="goal2" />
+         <addwaypoint id="goal8" />
+   </agent>
+   <agent x="10" y="0" n="3" dx="18" dy="5" type="0" purpose="1">
+         <addwaypoint id="goal1" />
+         <addwaypoint id="goal3" />
+   </agent>
+   <agent x="10" y="0" n="4" dx="18" dy="5" type="0" purpose="1">
+         <addwaypoint id="goal6" />
+         <addwaypoint id="goal9" />
+   </agent>
+
+   <agent x="0.0" y="0.0" theta="0.0" n="1" type="2">
+      <addwaypoint id="dest" />
+      <addwaypoint id="farDest" />
+   </agent>
+</scenario>
