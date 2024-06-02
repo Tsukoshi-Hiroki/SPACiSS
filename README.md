@@ -58,10 +58,11 @@ Requires:
 ### Install commands
 ```
 cd [workspace]/src
-git clone https://github.com/maprdhm/Spaciss.git  
+git clone https://github.com/Iwamura-Yuuka/SPACiSS.git  
 cd Spaciss
 git submodule update --init --recursive
 cd ../..
+sudo apt-get install ros-noetic-pcl-ros
 
 catkin_make or catkin build (twice at the first time)
 ```
