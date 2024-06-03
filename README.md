@@ -66,6 +66,7 @@ sudo apt-get install ros-noetic-pcl-ros
 
 catkin_make or catkin build (twice at the first time)
 ```
+- Not support colcon build
 
 ### Sample usage
 ```
