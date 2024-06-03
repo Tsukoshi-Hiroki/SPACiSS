@@ -1,4 +1,5 @@
-cmake_minimum_required(VERSION 2.8)
+# cmake_minimum_required(VERSION 2.8) 津越がコメントアウト
+cmake_minimum_required(VERSION 3.0.2) #津越が追記
 project(pedsim_simulator)
 add_definitions(-Wall -Wunused -std=c++14 -pipe -Wunused -Wextra)
 
